@@ -1,0 +1,10 @@
+#ifndef _Clock_
+#define _Clock_
+
+
+int hour, min, sec;
+
+
+
+
+#endif 

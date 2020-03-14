@@ -1,0 +1,11 @@
+main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"project.c" LINE:34
+Counter_add DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"Counter.c" LINE:11
+printf DSTACK_USAGE:10 DSTACK_LEVEL:10 FILE:"C:\cvavr\lib\stdio.lib" LINE:1528
+_print DSTACK_USAGE:20 DSTACK_LEVEL:30 FILE:"C:\cvavr\lib\stdio.lib" LINE:533
+strlen DSTACK_USAGE:2 DSTACK_LEVEL:32 FILE:"C:\cvavr\lib\string.lib" LINE:1706
+timer0_ovf_isr DSTACK_USAGE:12 DSTACK_LEVEL:44 FILE:"project.c" LINE:16
+glcd_dis DSTACK_USAGE:0 DSTACK_LEVEL:44 FILE:"Glcd_func.c" LINE:67
+disp DSTACK_USAGE:0 DSTACK_LEVEL:44 FILE:"Glcd_func.c" LINE:19
+sprintf DSTACK_USAGE:14 DSTACK_LEVEL:58 FILE:"C:\cvavr\lib\stdio.lib" LINE:1462
+_print DSTACK_USAGE:20 DSTACK_LEVEL:78 FILE:"C:\cvavr\lib\stdio.lib" LINE:533
+strlen DSTACK_USAGE:2 DSTACK_LEVEL:80 FILE:"C:\cvavr\lib\string.lib" LINE:1706

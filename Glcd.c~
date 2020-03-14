@@ -1,0 +1,79 @@
+
+#ifndef _Glcd_
+#define _Glcd_
+
+#define RST                     PORTA.5         
+#define CS1                     PORTA.3        
+#define CS2                     PORTA.4         
+#define R_S                     PORTA.0         
+#define R_W                     PORTA.1         
+#define E                       PORTA.2
+#define DATA                    PORTB
+
+         
+void CS_init(char sel1, char sel2)
+{
+        E=1;                    delay_us(1);
+        E=0;                    delay_us(1);
+        CS1=sel1;
+        CS2=sel2;           delay_us(1);
+}
+void command_lcd(char cmd)
+{
+        E=1;                    delay_us(1);
+        E=0;                    delay_us(1);
+        R_S=0;
+        R_W=0;              delay_us(1);
+        E=1;                    delay_us(1);
+        DATA=cmd;           delay_us(1);
+        E=0;                    delay_us(1);
+}
+
+void lcd_out(char *str)
+{
+    int i = 0;
+    
+        while(1){
+            if(str[i] == '\0')break;
+            data_lcd(str[i++]);
+            }
+}
+
+void data_lcd(char dat)
+{
+        E=1;                    delay_us(1);
+        E=0;                    delay_us(1);
+        R_S=1;
+        R_W=0;              delay_us(1);
+        E=1;                    delay_us(1);
+        DATA=dat;         delay_us(1);
+        E=0;                    delay_us(1);
+}
+
+void lcd_clear(void)
+{
+        char x,y;
+        
+        x=0xB8;
+        y=0x40;
+        
+        for(x=0xB8; x<=0xBF; x++)
+        {
+              command_lcd(x);
+              command_lcd(y);
+              for(y=0x40; y<=0x7F; y++)
+              {
+                 data_lcd(0x00);
+              }
+        }
+}
+
+void lcd_init(void)
+{
+        command_lcd(0x3F);
+        command_lcd(0x40);        // Y address(0)
+        command_lcd(0xB8);        // X address(0)
+        command_lcd(0xC0);        // StartLine(0)
+}
+
+#endif 

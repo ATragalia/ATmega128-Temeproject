@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:4CD90D2B
+NODE:M LEVEL:0 LINE:2 "__Glcd_func__"
+NODE:V LEVEL:0 LINE:4 "lcd_loop -> RAM:????"
+NODE:V LEVEL:0 LINE:5 "sec -> RAM:????"
+NODE:V LEVEL:0 LINE:5 "min -> RAM:????"
+NODE:V LEVEL:0 LINE:5 "hour -> RAM:????"
+NODE:V LEVEL:0 LINE:5 "load -> RAM:????"
+NODE:V LEVEL:0 LINE:6 "buf -> RAM:????"
+NODE:I LEVEL:0 LINE:8 "C:\Users\ragalia\Desktop\codevision\team_project\glcd_128.h"
+NODE:F LEVEL:0 LINE:11 "func_init(void)"
+NODE:F LEVEL:0 LINE:19 "disp(void)"
+NODE:F LEVEL:0 LINE:67 "glcd_dis(void)"
